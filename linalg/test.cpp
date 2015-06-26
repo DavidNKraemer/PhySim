@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "matrix.h"
 
 int 
@@ -7,13 +6,9 @@ main ()
 {
 	printf("test.cpp\n");
 
-	Matrix A = ones (6);
+	Matrix A = eye (3) * 2;
+	Matrix B = ones (3, 5);
 
-	A.print();
-
-	A.reshape(3,12);
-
-	A.print();
-
+	(A*B).print();
 	return 0;
 }

@@ -18,13 +18,22 @@ public:
 	void set_val (int i, int j, double val);
 	void print (int precision = 2);
 
+	Matrix transpose ();
+	Matrix T ();
+
 	/* Matrix arithmetic operations */
 	Matrix operator+ (Matrix const M) const;
 	Matrix operator- (Matrix const M) const;
 	Matrix operator* (Matrix const M) const;
+	Matrix operator* (double const c) const;
+	Matrix operator/ (double const c) const;
+	
+
 	void operator+= (Matrix const M) const;
 	void operator-= (Matrix const M) const;
 	void operator*= (Matrix const M) const;
+	void operator*= (double const c) const;
+	void operator/= (double const c) const;
 };
 
 Matrix fill (int m, int n, double val);
